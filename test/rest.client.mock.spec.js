@@ -14,4 +14,14 @@ describe('rest.client.mock', function() {
             expect(mock.context).toEqual('context');
         });
     });
+
+    describe('restServiceHandler', function() {
+        beforeEach(inject(function(restServiceHandler) {
+            rest = restServiceHandler;
+        }));
+
+        it('is a spy', function() {
+            expect(rest.identity).toEqual('restServiceHandlerSpy');
+        });
+    });
 });
