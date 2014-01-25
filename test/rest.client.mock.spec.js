@@ -25,9 +25,9 @@ describe('rest.client.mock', function() {
         });
     });
 
-    it('exposes installRestHeaderMapper spy', inject(function(installRestHeaderMapper) {
+    it('exposes installRestHeaderMapper spy', inject(function(installRestDefaultHeaderMapper) {
         var mapper = jasmine.createSpy('mapper');
-        installRestHeaderMapper(mapper);
-        expect(installRestHeaderMapper.calls[0].args[0]).toEqual(mapper);
+        installRestDefaultHeaderMapper(mapper);
+        expect(installRestDefaultHeaderMapper.calls[0].args[0]).toEqual(mapper);
     }));
 });
