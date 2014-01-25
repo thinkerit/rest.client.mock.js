@@ -1,4 +1,7 @@
 angular.module('rest.client', [])
+    .factory('installRestHeaderMapper', function() {
+        return jasmine.createSpy('installRestHeaderMapper');
+    })
     .factory('restServiceHandler', function() {
         return jasmine.createSpy('restServiceHandlerSpy');
     })

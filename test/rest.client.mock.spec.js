@@ -24,4 +24,10 @@ describe('rest.client.mock', function() {
             expect(rest.identity).toEqual('restServiceHandlerSpy');
         });
     });
+
+    it('exposes installRestHeaderMapper spy', inject(function(installRestHeaderMapper) {
+        var mapper = jasmine.createSpy('mapper');
+        installRestHeaderMapper(mapper);
+        expect(installRestHeaderMapper.calls[0].args[0]).toEqual(mapper);
+    }));
 });
